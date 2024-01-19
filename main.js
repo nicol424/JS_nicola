@@ -132,26 +132,102 @@
 // PS: Potete provare ad inserire condizioni e controlli ulteriori se volete sperimentare. Stupitemi!
 
 
-let bevanda = "3";
-let age = "22";
+// let bevanda = "3";
+// let age = "22";
 
-if (bevanda == 1){
-        console.log("è stata selezionata l'acqua");
-    } else if (bevanda == 2) {
-        console.log("è stata erogata la coca cola");
+// if (bevanda == 1){
+//         console.log("è stata selezionata l'acqua");
+//     } else if (bevanda == 2) {
+//         console.log("è stata erogata la coca cola");
     
-    } else if (bevanda == 3) {
-        if (age >= 18 ) { 
-            console.log("è stata selezionata la birra");
-        }  else {
-            console.log("sei minorenne, non puoi bere");
-        }
+//     } else if (bevanda == 3) {
+//         if (age >= 18 ) { 
+//             console.log("è stata selezionata la birra");
+//         }  else {
+//             console.log("sei minorenne, non puoi bere");
+//         }
 
-    } else{
-        console.log("questa bevanda non è disponibile");
-    }
-
-
-
+//     } else{
+//         console.log("questa bevanda non è disponibile");
+//     }
 
 // * FINE ESERCIZIO N.3
+// ESERCITAZIONE DEI DATI
+// Scrivi un programma che, dato il numero dei tiri da effettuare per ciascun giocatore (N),
+//  simuli un gioco di dadi tra due utenti, stampando il giocatore che ha totalizzato più punti,
+//  supponendo che ogni dado abbia al massimo 6 facce, ogni giocatore tirerà il dado N volte, ciò  significa che verrà generato un numero casuale ad ogni tiro che sarà sommato ai precedenti per calcolare il punteggio del giocatore
+// Math.floor(Math.random() * (max - min + 1) + min);
+// Buon lavoro 🚀
+
+// alert("tira il player 1")
+// let point1 = 0;
+// let tiri = 3;
+
+// for (let i =1; i <= i++ )  {
+//     point1 = point1 + Math.floor(Math.random) * (6 - 1 + 1) + 1;
+// }
+// alert(`il pinteggio finale è ${point1}`)
+
+// alert ("tira il player 2");
+// let point2 = 0;
+
+// for (let i = 1; i <= TransitionEvent; i++) {
+//     point2 = point2 + Math.floor(Math.random) * (6 - 1 + 1) + 1;
+// }
+// alert= (`il punteggio finale è ${point2}`)
+
+// if(point1>point2) {
+//     alert("ha vinto il player 1");
+//     }  else {
+//         alert("ha vinto il player 2")
+//     }
+
+// ESERCIZIO EXTRA N.1
+// **Esercizio 1:**
+// Scrivi un programma che stampi numeri da 1 a 50. Per i multipli di 3, stampa "Fizz" al posto del numero. Per i multipli di 5, stampa "Buzz". Per i numeri che sono sia multipli di 3 che di 5, stampa "FizzBuzz".
+
+// for (let i = 1; i <= 30; i++) {
+//     if(i % 3 === 0 && i % 5 === 0) {
+//         console.log("FizzBuzz");
+//     } else if (i % 3 === 0) {
+//         console.log("Fizz");    
+//     }  else if (i % 5  === 0) {
+//         console.log("Buzz");
+//     } else { console.log(i);}
+// }
+
+
+// ESERCIZIO EXTRA N.2
+// **Esercizio 2:**
+// Crea un programma che calcoli la somma dei quadrati dei numeri dispari compresi tra 1 e 10 usando un ciclo for.
+
+// let counter = 0
+
+// for (let i= 1; i <= 10; i++) {
+//     if (i % 2 != 0) {
+//         counter += i*i
+//         console.log(counter);
+//     }
+// }
+
+// ESERCIZIO EXTRA N.3
+// **Esercizio 3:**
+// Crea un programma che stampi la sequenza di numeri di Fibonacci fino al 15° termine. Per i numeri pari, stampa "Even", altrimenti stampa "Odd".
+
+// let a = 0
+// let b = 1 
+// let c
+
+// for (let i= 0; i <= 15; i++) {
+//     c= a + b;
+//     a = b;
+//     b = c;
+//     if (c % 2 === 0) {
+//         console.log("Even", c);
+//     }
+//     else{console.log("Odd", c);}
+// }
+
+// ESERCIZIO EXTRA N.4
+// **Esercizio 4:**
+// Crea un programma che stampi i primi 10 numeri primi utilizzando un ciclo while.
