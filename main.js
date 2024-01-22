@@ -186,7 +186,7 @@
 // **Esercizio 1:**
 // Scrivi un programma che stampi numeri da 1 a 50. Per i multipli di 3, stampa "Fizz" al posto del numero. Per i multipli di 5, stampa "Buzz". Per i numeri che sono sia multipli di 3 che di 5, stampa "FizzBuzz".
 
-// for (let i = 1; i <= 30; i++) {
+// for (let i = 1; i <= 50; i++) {
 //     if(i % 3 === 0 && i % 5 === 0) {
 //         console.log("FizzBuzz");
 //     } else if (i % 3 === 0) {
@@ -231,3 +231,189 @@
 // ESERCIZIO EXTRA N.4
 // **Esercizio 4:**
 // Crea un programma che stampi i primi 10 numeri primi utilizzando un ciclo while.
+
+// let voto = ;
+
+// if (voto >= 1 && voto <= 18) {
+//     console.log("Sei bocciato");
+// }  
+// else if (voto > 18 && voto <= 30) {
+//     console.log("Sei promosso");
+// }
+// else {
+//     console.log("questo voto non esiste");
+// }
+
+//? ESERCITAZIONE 22/01
+
+// Scrivere una funzione che prenda come input un numero e generi un array composto da n numeri casuali compresi tra 1 e 10.
+
+// HINT: COME SI AGGIUNGE UN ELEMENTO ALLA FINE DI UN ARRAY?
+
+// Esempio: Input= 5 Output= [5, 9, 1, 6, 10]
+//? ESERCIZIO 1
+
+// function generaNumeri(n) {
+//     let numeriCasuali = [];
+//     for (let i = 0; i < n; i++) {
+//          let numeroCasuale = Math.floor(Math.random() * 10) + 1;
+//         numeriCasuali.push(numeroCasuale);
+//     }
+
+//     return numeriCasuali; 
+// }
+
+// let numeroDiNumeri = 8;
+// let arrayDiNumeriCasuali = generaNumeri(numeroDiNumeri);
+
+//     console.log("Array di numeri casuali:", arrayDiNumeriCasuali);
+
+//! ESERCIZIO 2
+
+// Metti un po' d'ordine
+
+// Scrivi una funzione che dato un array di 10 numeri interi ordinati in modo casuale li riordini in modo decrescente.
+
+//  Esempio:
+
+//  Input: array = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4]
+
+//  Output: [8, 7, 6, 5, 5, 3, 2, 1, -2, -4]
+
+// function riordinaDecrescente(array) {
+//     array.sort(function(a, b) {
+//         return b - a;
+//     });
+// }
+// let arrayDiNumeri = [3, 7, -2, 5, 8, 1, 2, 5, 6, -4];
+
+// console.log(arrayDiNumeri);
+// riordinaDecrescente(arrayDiNumeri);
+// console.log(arrayDiNumeri);
+
+//* ESERCIZIO 3
+
+// Scrivi una funzione che dato un numero intero (massimo 9999) conti da quante cifre è formato.
+
+
+
+//  Esempi:
+
+//  Input : 9
+
+//  Output : 1 cifra
+
+
+//  Input : 99
+
+//  Output : 2 cifre
+
+// function countArray(numero) {
+//     if (numero < 0 || numero > 9999 || isNaN(numero) || !Number.isInteger(numero)) {
+//         return "Input non valido";
+//     }
+
+//     let numArray = numero.toString().split('');
+
+//     return numArray.length + " cifre";
+// }
+
+// console.log(countArray(8));  
+// console.log(countArray(69)); 
+// console.log(countArray(134));
+// console.log(countArray(8769));
+// console.log(countArray(-5));  
+
+// *ESERCIZIO 4*
+
+// Scrivi una funzione di uguaglianza che prenda in input due argomenti e restituisca TRUE se i due argomenti sono IDENTICI,
+
+//  FALSE altrimenti.
+
+//  **Esempi:**
+
+//  Input: n = 2, m = 3
+
+//  Output: FALSE
+
+
+
+//  Input: n = 2, m = '2'
+
+//  Output: FALSE
+
+
+//  Input: n = 2, m = 2
+
+//  Output: TRUE 
+
+// function ciao(num1, num2) {
+//     return num1 === num2;
+// }
+
+// console.log(ciao(2, 3));
+// console.log(ciao(2, "2"));
+// console.log(ciao(2, 2));
+
+// ESERCIZIO 5
+
+// Scrivi una funzione che dato un numero stampi la tabellina corrispondente.
+
+// function tabellina (numero) {
+//     if (!Number.isInteger(numero)) {
+//         console.log("Input non valido. Inserisci un numero intero.");
+//         return;
+//     }
+//     console.log(`Tabellina del ${numero}:`);
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(`${numero} x ${i} = ${numero * i}`);
+//     }
+// }
+// tabellina(8);
+
+// function tabellina(num) {
+//     if (!Number.isInteger(num)) {
+//         console.log("numero non valido. Inserisci un numero intero.");
+//         return;
+//     }
+//     console.log(`Tabellina del ${num}`);
+//     for (let i = 0; i <= 20; i++) {
+//         console.log(`${num} x ${i} = ${num * i}`);
+//     }
+// }
+// tabellina(7);
+
+// **ESERCIZIO 6**
+
+// Scrivi due funzioni: 
+// dato un array: let numbers = [10, 12, 78, -4, -20, 11]; 
+// una che prenda in input un array di numeri e restituisca il maggiore,
+// l'altra che restituisca il minore. Suggerimento utilizzare Math.max() e Math.min(); 
+
+// let numbers = [10, 12, 78, -4, -20, 11];
+
+// function findMax(array) {
+//     if (array.length === 0) {
+//         console.log("L'array è vuoto.");
+//         return;
+//     }
+
+//     let massimo = Math.max(...array);
+//     return massimo;
+// }
+
+// function findMin(array) {
+//     if (array.length === 0) {
+//         console.log("L'array è vuoto.");
+//         return;
+//     }
+
+//     let minimo = Math.min(...array);
+//     return minimo;
+// }
+
+// let massimo = findMax(numbers);
+// let minimo = findMin(numbers);
+
+// console.log("Il numero massimo nell'array è:", massimo);
+// console.log("Il numero minimo nell'array è:", minimo);
