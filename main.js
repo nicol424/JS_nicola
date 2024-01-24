@@ -433,6 +433,8 @@
 // console.log(somma(numbers));
 
 
+
+
 // **ESERCIZIO 2:**
 
 // Scrivi un programma che dato un array di numeri, restituisca in output la media e tutti i valori minori della media. Esempio: Input: a = [3, 5, 10, 2, 8] Output: media = 5.6, valori minori = [3, 5, 2]
@@ -515,7 +517,7 @@
 //   Output: TRUE
 
 // Suggerimento: Puoi eliminare spazi e segni di punteggiatura usando:
-// str.replace(/\W/g, "")
+// str.replace(/W/g, "")
 
 
 // Spacchettate l 'esercizio in problemi più piccoli, e cercando su internet, trovate i metodi che vi servono!
@@ -537,3 +539,160 @@
 //   console.log(`Input: "${input}"`);
 //   console.log("Output:", output);
   
+//? ESERCITAZIONE 24/01
+// calcolare l'aria di un cerchio di raggio = 10
+
+// let raggio = 10;
+// let pi =3.14;
+
+// let area = pi * raggio ** 2
+
+// console.log(area);
+
+// function areaCerchio(raggio) {
+//     return Math.PI * raggio ** 2
+// }
+
+// for (let i = 1; i <= 10; i++) {
+//     console.log(areaCerchio(i));
+    
+// }
+
+// calcolare l'ipotenusa di un triangolo rettangolo di cateti 3 e 4.
+
+// let latoCorto = 3;
+// let latoLungo = 4;
+
+// let Ipotenusa = Math.sqrt(latoCorto**2 + latoLungo**2);
+// console.log(Ipotenusa);
+
+// function pitagora(LatoCorto, LatoLungo) {
+//     return Math.sqrt(LatoCorto**2 + LatoLungo**2);
+// }
+// console.log(pitagora(3, 4));
+
+// scrivere una funziona che assegni due numeri, che generi un numero random, intero, fra i due assegnati (compresi).
+
+// function randomico(min, max) {
+//    return Math.round(Math.random()*(max-min)+min)
+
+// scrivere una funzione che trasformi un nome nelle sue iniziali. esempio "Tizio Caio" --> "T C"
+
+// function init(stringa) {
+//     return stringa.split(" ").map( el => el[0] +".").join("")
+// }
+// console.log(init("Tizio Caio"));
+
+// }
+// console.log(randomico(3, 9));
+// scrivere una funzione che, assegnati tre numeri, ritorni true se i tre numeri possono essere i lati di un triangolo, false altrimenti.
+
+// function èTriangolo(a, b, c) {
+//     let primo = ( a > Math.abs(b-c)) && ( a < (b+c) )
+//     let secondo = ( b > Math.abs(a-c)) && (b < (a+c) )
+//     let terzo = ( c > Math.abs(a-b)) && (c < (a+b) )
+//     return primo && secondo && terzo
+// }
+// console.log(èTriangolo(3, 4, 5));
+
+// function colcatz(num) {
+//     let arr =[num]
+//     while(num > 1){
+//         if (num % 2 == 0) {
+//             num = num / 2
+//         } else {
+//             num = 3 * num +1
+//         }
+//         arr.push(num)
+//     }
+//     return arr
+
+// }
+// console.log(colcatz(10));
+// console.log(colcatz(32));
+
+// scrivere uj programma che stampi i numeri da 1 a 100: per i multipli di 3 stampare "JAVA" (al posto del numero), per i multipli di 5 stampare "SCRIPT". Infine per i numeri multipli di 3 e 5 stampare invece "JAVASCRIPT"
+
+// for (let i = 1; i <= 100; i++) {
+
+//     if( i % 15 == 0) {
+//         console.log("Javascript");
+//     } else if ( i % 3 == 0) {
+//         console.log("Java");
+//     } else if (i % 5 == 0) {
+//         console.log("script");
+//     }  else {
+//         console.log(i);
+//     }
+// }
+
+// scrivi una funzione che, assegnato un numero, tirorni in successione di Fibonacci fino all' n-esimo numero sotto forma di array. Ad esempio: 3 => [1, 1, 2, 3, 5, 8, 13, 21, 34];
+
+// function fibonacci(n){
+//     let final =[1, 1]
+
+//     for (let i = 2; i < n; i++) {
+
+//         final.push(final[i-2] + final[i-1])
+//     }
+
+//     return final
+// }
+//  console.log(fibonacci(10));
+
+// scrivere una funzione che, assegnato un numero n, tirorni se è primo.
+
+// function isPrime(n) {
+    
+//     if(n == 1) return false
+//     if(n == 2) return true
+
+//     for (let i = 2; i < n; i++) {
+        
+//         if (n % i == 0) return false 
+//     }
+
+//     return true
+// }
+// console.log(isPrime(17));
+// console.log(isPrime(172));
+
+// scrivere una funzione che, assegnando una stringa, ritorni la somma delle cifre in essa presenti. Esempio "sono una stringa di 6 parole => 7"
+
+// function strSum(str) {
+//     return str.split("").filter( el => Number(el)).map( el => Number(el)).reduce((t,n) => t+n)
+// }
+// console.log(strSum("sono 1 stringa di 3 parole"));
+
+// scrivi una funzione che accetta come parametri un array di numeri ed un numero di soglia, e restituisca un array formato dai numeri maggiori della soglia fornita. Ad esempio ([1,2,3,4],3) => [4]
+
+// function over(array, soglia) {
+//     return array.filter( el => el > soglia)
+// }
+// console.log(over([1,2,3,4],3));
+
+// function orologio(num) {
+    
+//     let ore = Math.floor(num / 60)
+//     if (ore < 10) ore = "0"  + ore 
+
+//     let minuti = num % 60
+//     if (minuti < 10) ore = "0"  + minuti 
+
+//     return `${ore} : ${minuti}`
+// }
+
+// console.log(orologio());
+
+// scrivi una funzione che generi un array formato di N numeri interi random, fra un minimo ed un massimo assegnati
+
+// function randomArray (n, min, max) {
+//     let final = []
+//     for (let i = 0; i < n; i++) {
+//         final.push(Math.round(Math.random()*(max-min)+min))
+        
+//     }
+//         return final
+// } 
+// console.log(randomArray(10,1,5));
+
